@@ -17,42 +17,42 @@ const Home = () => {
       id: 1,
       name: "100% FEATHER WATER-REPELLENT PUFFER JACKET",
       price: "৳14,280",
-      image: "https://via.placeholder.com/400x600/2C3E50/FFFFFF?text=Black+Puffer",
+      image: `${process.env.PUBLIC_URL}/assets/Burka1.jpg`,
       category: "PUFFERS"
     },
     {
       id: 2,
       name: "TEXTURED JACQUARD JACKET",
       price: "৳9,594",
-      image: "https://via.placeholder.com/400x600/8B7355/FFFFFF?text=Textured+Jacket",
+      image: `${process.env.PUBLIC_URL}/assets/Burka2.jpg`,
       category: "BOMBER"
     },
     {
       id: 3,
       name: "ABSTRACT JACQUARD JACKET",
       price: "৳9,594",
-      image: "https://via.placeholder.com/400x600/5D6D7E/FFFFFF?text=Abstract+Jacket",
+      image: `${process.env.PUBLIC_URL}/assets/Burka3.jpg`,
       category: "LEATHER EFFECT"
     },
     {
       id: 4,
       name: "CONTRAST COLLAR POLO SWEATSHIRT",
       price: "৳4,794",
-      image: "https://via.placeholder.com/400x600/85C1E9/FFFFFF?text=Polo+Shirt",
+      image: `${process.env.PUBLIC_URL}/assets/Burka4.jpg`,
       category: "SWEATSHIRTS"
     },
     {
       id: 5,
       name: "RELAXED FIT TROUSERS",
       price: "৳5,514",
-      image: "https://via.placeholder.com/400x600/1C2833/FFFFFF?text=Black+Trousers",
+      image: `${process.env.PUBLIC_URL}/assets/Burka5.jpg`,
       category: "TROUSERS"
     },
     {
       id: 6,
       name: "LEATHER PENNY LOAFERS",
       price: "৳10,794",
-      image: "https://via.placeholder.com/400x600/7B3F00/FFFFFF?text=Brown+Loafers",
+      image: `${process.env.PUBLIC_URL}/assets/Burka6.jpg`,
       category: "SHOES"
     },
     {
