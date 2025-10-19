@@ -5,97 +5,182 @@ import './Home.css';
 const Home = () => {
   // State to track current view mode
   const [currentView, setCurrentView] = useState(1);
+  // State to track how many products to display
+  const [visibleProducts, setVisibleProducts] = useState(8);
 
   // Handle view change
   const handleViewChange = (viewNumber) => {
     setCurrentView(viewNumber);
   };
 
-  // Sample clothing data with ZARA-style items
+  // Handle load more functionality
+  const handleLoadMore = () => {
+    setVisibleProducts(prev => prev + 6);
+  };
+
+  // Queen's Vogue Complete Product Collection - 23 Unique Items
   const clothingItems = [
     {
       id: 1,
-      name: "100% FEATHER WATER-REPELLENT PUFFER JACKET",
-      price: "৳14,280",
+      name: "Elegant Black Embroidered Burka",
+      price: "৳8,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka1.jpg`,
-      category: "PUFFERS"
+      video: `${process.env.PUBLIC_URL}/assets/BurkaVideo1.mp4`,
+      category: "BURKA"
     },
     {
       id: 2,
-      name: "TEXTURED JACQUARD JACKET",
-      price: "৳9,594",
+      name: "Premium Black Pattern Burka",
+      price: "৳9,200",
       image: `${process.env.PUBLIC_URL}/assets/Burka2.jpg`,
-      category: "BOMBER"
+      category: "BURKA"
     },
     {
       id: 3,
-      name: "ABSTRACT JACQUARD JACKET",
-      price: "৳9,594",
+      name: "Traditional Floral Design Burka",
+      price: "৳7,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka3.jpg`,
-      category: "LEATHER EFFECT"
+      category: "BURKA"
     },
     {
       id: 4,
-      name: "CONTRAST COLLAR POLO SWEATSHIRT",
-      price: "৳4,794",
+      name: "Sophisticated Black Burka",
+      price: "৳8,000",
       image: `${process.env.PUBLIC_URL}/assets/Burka4.jpg`,
-      category: "SWEATSHIRTS"
+      category: "BURKA"
     },
     {
       id: 5,
-      name: "RELAXED FIT TROUSERS",
-      price: "৳5,514",
+      name: "Classic Modest Burka",
+      price: "৳7,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka5.jpg`,
-      category: "TROUSERS"
+      category: "BURKA"
     },
     {
       id: 6,
-      name: "LEATHER PENNY LOAFERS",
-      price: "৳10,794",
+      name: "Luxurious Black Embellished Burka",
+      price: "৳9,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka6.jpg`,
-      category: "SHOES"
+      category: "BURKA"
     },
     {
       id: 7,
-      name: "LIGHTWEIGHT BOMBER JACKET",
-      price: "৳7,194",
-      image: "https://via.placeholder.com/400x600/34495E/FFFFFF?text=Navy+Bomber",
-      category: "BOMBER"
+      name: "Contemporary Designed Burka",
+      price: "৳8,300",
+      image: `${process.env.PUBLIC_URL}/assets/Burka7.jpg`,
+      category: "BURKA"
     },
     {
       id: 8,
-      name: "MERINO WOOL SWEATER",
-      price: "৳5,994",
-      image: "https://via.placeholder.com/400x600/641E16/FFFFFF?text=Wool+Sweater",
-      category: "KNITWEAR"
+      name: "Modern Style Burka",
+      price: "৳7,900",
+      image: `${process.env.PUBLIC_URL}/assets/Burka8.jpg`,
+      category: "BURKA"
     },
     {
       id: 9,
-      name: "STRAIGHT FIT JEANS",
-      price: "৳4,314",
-      image: "https://via.placeholder.com/400x600/1B4F72/FFFFFF?text=Denim+Jeans",
-      category: "DENIM"
+      name: "Graceful Black Burka",
+      price: "৳8,400",
+      image: `${process.env.PUBLIC_URL}/assets/Burka9.jpg`,
+      category: "BURKA"
     },
     {
       id: 10,
-      name: "MINIMALIST SNEAKERS",
-      price: "৳9,594",
-      image: "https://via.placeholder.com/400x600/F8F9FA/333333?text=White+Sneakers",
-      category: "SHOES"
+      name: "Designer Pattern Burka",
+      price: "৳9,000",
+      image: `${process.env.PUBLIC_URL}/assets/Burka10.jpg`,
+      category: "BURKA"
     },
     {
       id: 11,
-      name: "OVERSIZED BLAZER",
-      price: "৳11,994",
-      image: "https://via.placeholder.com/400x600/2E4057/FFFFFF?text=Navy+Blazer",
-      category: "BLAZERS"
+      name: "Premium Collection Burka",
+      price: "৳9,500",
+      image: `${process.env.PUBLIC_URL}/assets/Burka11.jpg`,
+      category: "BURKA"
     },
     {
       id: 12,
-      name: "BASIC T-SHIRT PACK",
-      price: "৳2,394",
-      image: "https://via.placeholder.com/400x600/FFFFFF/333333?text=White+Tee",
-      category: "T-SHIRTS"
+      name: "Burgundy Floral Pattern Dress",
+      price: "৳6,800",
+      image: `${process.env.PUBLIC_URL}/assets/Burka12.jpg`,
+      category: "FLORAL"
+    },
+    {
+      id: 13,
+      name: "Geometric Black & White Dress",
+      price: "৳7,200",
+      image: `${process.env.PUBLIC_URL}/assets/Burka13.jpg`,
+      category: "GEOMETRIC"
+    },
+    {
+      id: 14,
+      name: "Modern Geometric Pattern Dress",
+      price: "৳7,500",
+      image: `${process.env.PUBLIC_URL}/assets/Burka14.jpg`,
+      category: "GEOMETRIC"
+    },
+    {
+      id: 15,
+      name: "Gradient Ombre Dress - Green",
+      price: "৳6,200",
+      image: `${process.env.PUBLIC_URL}/assets/Burka15.jpg`,
+      category: "OMBRE"
+    },
+    {
+      id: 16,
+      name: "Chevron Stripe Set - Multi Color",
+      price: "৳5,800",
+      image: `${process.env.PUBLIC_URL}/assets/Burka16.jpg`,
+      category: "SETS"
+    },
+    {
+      id: 17,
+      name: "Gradient Ombre Dress - Pink",
+      price: "৳6,200",
+      image: `${process.env.PUBLIC_URL}/assets/Burka17.jpg`,
+      category: "OMBRE"
+    },
+    {
+      id: 18,
+      name: "Pleated Style Dress Collection",
+      price: "৳5,500",
+      image: `${process.env.PUBLIC_URL}/assets/Burka18.jpg`,
+      category: "PLEATED"
+    },
+    {
+      id: 19,
+      name: "Pink Embroidered Traditional Dress",
+      price: "৳8,800",
+      image: `${process.env.PUBLIC_URL}/assets/Burka19.jpg`,
+      category: "EMBROIDERED"
+    },
+    {
+      id: 20,
+      name: "Zebra Leaf Pattern Dress",
+      price: "৳7,000",
+      image: `${process.env.PUBLIC_URL}/assets/Burka20.jpg`,
+      category: "PATTERN"
+    },
+    {
+      id: 21,
+      name: "Black & White Stripe Dress",
+      price: "৳6,500",
+      image: `${process.env.PUBLIC_URL}/assets/Burka21.jpg`,
+      category: "STRIPES"
+    },
+    {
+      id: 22,
+      name: "Burgundy Embroidered Dress",
+      price: "৳9,200",
+      image: `${process.env.PUBLIC_URL}/assets/Burka22.jpg`,
+      category: "EMBROIDERED"
+    },
+    {
+      id: 23,
+      name: "Black Embroidered Traditional Dress",
+      price: "৳8,900",
+      image: `${process.env.PUBLIC_URL}/assets/Burka23.jpg`,
+      category: "EMBROIDERED"
     }
   ];
 
@@ -133,14 +218,18 @@ const Home = () => {
         </div>
 
         <div className={`products-grid view-${currentView}`}>
-          {clothingItems.map(item => (
+          {clothingItems.slice(0, visibleProducts).map(item => (
             <ProductCard key={item.id} product={item} />
           ))}
         </div>
 
-        <div className="load-more">
-          <button className="load-more-btn">LOAD MORE ITEMS</button>
-        </div>
+        {visibleProducts < clothingItems.length && (
+          <div className="load-more">
+            <button className="load-more-btn" onClick={handleLoadMore}>
+              LOAD MORE ITEMS
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
