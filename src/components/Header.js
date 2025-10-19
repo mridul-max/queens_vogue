@@ -10,7 +10,10 @@ const Header = () => {
       <div className="container">
         <div className="nav-brand">
           <Link to="/" className="logo">
-            <h1>QUEENS VOGUE</h1>
+            <div className="logo-text">
+              <span className="brand-name">QUEEN'S VOGUE</span>
+              <span className="brand-tagline">Place of excellence</span>
+            </div>
           </Link>
         </div>
         

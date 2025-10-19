@@ -195,6 +195,74 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* WhatsApp card replacement styles */
+.whatsapp-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.whatsapp-card .whatsapp-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.whatsapp-instruction {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 4px 0;
+}
+
+.whatsapp-fields {
+  display: flex;
+  gap: 12px;
+}
+
+.whatsapp-field label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.whatsapp-field .phone {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 18px;
+  background-color: #25D366; /* WhatsApp green */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.22);
+}
+
+.whatsapp-btn .wa-icon {
+  font-size: 18px;
+}
+
 .social-links {
   text-align: center;
   background-color: #fff;

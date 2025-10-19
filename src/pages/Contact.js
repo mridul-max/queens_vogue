@@ -27,7 +27,7 @@ const Contact = () => {
               </div>
               <div className="contact-item">
                 <span className="label">Facebook:</span>
-                <a href="#" className="contact-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/QunV.bd" className="contact-link" target="_blank" rel="noopener noreferrer">
                   Visit our Facebook Page
                 </a>
               </div>
@@ -52,31 +52,26 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-form">
+          <div className="contact-form whatsapp-card">
             <h3>Send us a Message</h3>
-            <form>
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" required />
+            <div className="whatsapp-card-inner">
+              <p className="whatsapp-instruction">Prefer a faster reply? Message us on WhatsApp and we'll get back to you right away.</p>
+              <div className="whatsapp-fields">
+                <div className="whatsapp-field">
+                  <label>Phone</label>
+                  <div className="phone">+31 645 826 735</div>
+                </div>
               </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" className="submit-btn">SEND MESSAGE</button>
-            </form>
+              <a
+                href="https://wa.me/31645826735"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-btn"
+              >
+                <span className="wa-icon">📱</span>
+                Message us on WhatsApp
+              </a>
+            </div>
           </div>
         </div>
 
@@ -86,7 +81,7 @@ const Contact = () => {
             <a href="https://wa.me/31645826735" className="social-btn whatsapp" target="_blank" rel="noopener noreferrer">
               WhatsApp
             </a>
-            <a href="#" className="social-btn facebook" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/QunV.bd" className="social-btn facebook" target="_blank" rel="noopener noreferrer">
               Facebook
             </a>
             <a href="#" className="social-btn instagram" target="_blank" rel="noopener noreferrer">

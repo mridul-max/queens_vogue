@@ -37,30 +37,61 @@
 
 .view-toggles {
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 
 .view-toggles button {
   background: none;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
   font-size: 12px;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  min-width: 35px;
+  text-align: center;
+  color: #666;
 }
 
-.view-toggles button.active,
 .view-toggles button:hover {
+  border-color: #999;
+  color: #333;
+}
+
+.view-toggles button.active {
   background-color: #000;
   color: #fff;
   border-color: #000;
 }
 
+.view-toggles button.active:hover {
+  background-color: #333;
+}
+
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
   margin-bottom: 60px;
+  width: 100%;
+}
+
+/* View 1: 4 columns (default) - Larger product cards */
+.products-grid.view-1 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* View 2: 6 columns - More compact, similar to ZARA */
+.products-grid.view-2 {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+/* View 3: List view - Single column with horizontal layout */
+.products-grid.view-3 {
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .load-more {
@@ -85,31 +116,58 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .products-grid.view-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .products-grid.view-2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .page-header {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     align-items: flex-start;
   }
 
-  .products-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+  .products-grid.view-1,
+  .products-grid.view-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .products-grid.view-3 {
+    grid-template-columns: 1fr;
   }
 
   .view-options {
-    font-size: 12px;
-    gap: 10px;
+    align-self: stretch;
+    justify-content: space-between;
   }
 }
 
 @media (max-width: 480px) {
-  .products-grid {
+  /* On small phones make view-1 and view-2 show 2 columns for a denser product grid
+     keep view-3 as a single-column list view */
+  .products-grid.view-1,
+  .products-grid.view-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .products-grid.view-3 {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
   }
   
   .home {
     padding: 20px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
   }
 }
