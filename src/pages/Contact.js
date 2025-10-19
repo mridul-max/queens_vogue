@@ -21,8 +21,8 @@ const Contact = () => {
               <h3>Contact Information</h3>
               <div className="contact-item">
                 <span className="label">WhatsApp:</span>
-                <a href="https://wa.me/31645826735" className="contact-link" target="_blank" rel="noopener noreferrer">
-                  +31 645 826 735
+                <a href="https://wa.me/8801728221737" className="contact-link" target="_blank" rel="noopener noreferrer">
+                  +8801728221737
                 </a>
               </div>
               <div className="contact-item">
@@ -59,15 +59,10 @@ const Contact = () => {
               <div className="whatsapp-fields">
                 <div className="whatsapp-field">
                   <label>Phone</label>
-                  <div className="phone">+31 645 826 735</div>
+                  <div className="phone">+8801728221737</div>
                 </div>
               </div>
-              <a
-                href="https://wa.me/31645826735"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="whatsapp-btn"
-              >
+              <a href="https://wa.me/8801728221737" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
                 <span className="wa-icon">📱</span>
                 Message us on WhatsApp
               </a>
@@ -78,7 +73,7 @@ const Contact = () => {
         <div className="social-links">
           <h3>Follow Us</h3>
           <div className="social-buttons">
-            <a href="https://wa.me/31645826735" className="social-btn whatsapp" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/8801728221737" className="social-btn whatsapp" target="_blank" rel="noopener noreferrer">
               WhatsApp
             </a>
             <a href="https://www.facebook.com/QunV.bd" className="social-btn facebook" target="_blank" rel="noopener noreferrer">
