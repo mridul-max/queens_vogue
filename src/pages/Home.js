@@ -23,7 +23,7 @@ const Home = () => {
     {
       id: 1,
       name: "Elegant Black Embroidered Burka",
-      price: "৳8,500",
+      price: "৳4,400",
       image: `${process.env.PUBLIC_URL}/assets/Burka1.jpg`,
       video: `${process.env.PUBLIC_URL}/assets/BurkaVideo1.mp4`,
       category: "BURKA"
@@ -31,154 +31,154 @@ const Home = () => {
     {
       id: 2,
       name: "Premium Black Pattern Burka",
-      price: "৳9,200",
+      price: "৳4,400",
       image: `${process.env.PUBLIC_URL}/assets/Burka2.jpg`,
       category: "BURKA"
     },
     {
       id: 3,
       name: "Traditional Floral Design Burka",
-      price: "৳7,800",
+      price: "৳5,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka3.jpg`,
       category: "BURKA"
     },
     {
       id: 4,
       name: "Sophisticated Black Burka",
-      price: "৳8,000",
+      price: "৳4,400",
       image: `${process.env.PUBLIC_URL}/assets/Burka4.jpg`,
       category: "BURKA"
     },
     {
       id: 5,
       name: "Classic Modest Burka",
-      price: "৳7,500",
+      price: "৳4,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka5.jpg`,
       category: "BURKA"
     },
     {
       id: 6,
       name: "Luxurious Black Embellished Burka",
-      price: "৳9,800",
+      price: "৳5,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka6.jpg`,
       category: "BURKA"
     },
     {
       id: 7,
       name: "Contemporary Designed Burka",
-      price: "৳8,300",
+      price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka7.jpg`,
       category: "BURKA"
     },
     {
       id: 8,
       name: "Modern Style Burka",
-      price: "৳7,900",
+      price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka8.jpg`,
       category: "BURKA"
     },
     {
       id: 9,
       name: "Graceful Black Burka",
-      price: "৳8,400",
+      price: "৳2,600",
       image: `${process.env.PUBLIC_URL}/assets/Burka9.jpg`,
       category: "BURKA"
     },
     {
       id: 10,
       name: "Designer Pattern Burka",
-      price: "৳9,000",
+      price: "৳2,600",
       image: `${process.env.PUBLIC_URL}/assets/Burka10.jpg`,
       category: "BURKA"
     },
     {
       id: 11,
       name: "Premium Collection Burka",
-      price: "৳9,500",
+      price: "৳2,700",
       image: `${process.env.PUBLIC_URL}/assets/Burka11.jpg`,
       category: "BURKA"
     },
     {
       id: 12,
       name: "Burgundy Floral Pattern Dress",
-      price: "৳6,800",
+      price: "৳2,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka12.jpg`,
       category: "FLORAL"
     },
     {
       id: 13,
       name: "Geometric Black & White Dress",
-      price: "৳7,200",
+      price: "৳2,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka13.jpg`,
       category: "GEOMETRIC"
     },
     {
       id: 14,
       name: "Modern Geometric Pattern Dress",
-      price: "৳7,500",
+      price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka14.jpg`,
       category: "GEOMETRIC"
     },
     {
       id: 15,
       name: "Gradient Ombre Dress - Green",
-      price: "৳6,200",
+      price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka15.jpg`,
       category: "OMBRE"
     },
     {
       id: 16,
       name: "Chevron Stripe Set - Multi Color",
-      price: "৳5,800",
+      price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka16.jpg`,
       category: "SETS"
     },
     {
       id: 17,
       name: "Gradient Ombre Dress - Pink",
-      price: "৳6,200",
+      price: "৳2,700",
       image: `${process.env.PUBLIC_URL}/assets/Burka17.jpg`,
       category: "OMBRE"
     },
     {
       id: 18,
       name: "Pleated Style Dress Collection",
-      price: "৳5,500",
+      price: "৳2,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka18.jpg`,
       category: "PLEATED"
     },
     {
       id: 19,
       name: "Pink Embroidered Traditional Dress",
-      price: "৳8,800",
+      price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka19.jpg`,
       category: "EMBROIDERED"
     },
     {
       id: 20,
       name: "Zebra Leaf Pattern Dress",
-      price: "৳7,000",
+      price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka20.jpg`,
       category: "PATTERN"
     },
     {
       id: 21,
       name: "Black & White Stripe Dress",
-      price: "৳6,500",
+      price: "৳3,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka21.jpg`,
       category: "STRIPES"
     },
     {
       id: 22,
       name: "Burgundy Embroidered Dress",
-      price: "৳9,200",
+      price: "৳2,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka22.jpg`,
       category: "EMBROIDERED"
     },
     {
       id: 23,
       name: "Black Embroidered Traditional Dress",
-      price: "৳8,900",
+      price: "৳3,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka23.jpg`,
       category: "EMBROIDERED"
     }

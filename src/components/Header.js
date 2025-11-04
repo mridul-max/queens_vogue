@@ -10,24 +10,20 @@ const Header = () => {
       <div className="container">
         <div className="nav-brand">
           <Link to="/" className="logo">
-            <div className="logo-text">
-              <span className="brand-name">QUEEN'S VOGUE</span>
-              <span className="brand-tagline">Place of excellence</span>
-            </div>
+            <h1>QUEENS VOGUE</h1>
           </Link>
         </div>
         
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-links">
             <li><Link to="/" onClick={() => setIsMenuOpen(false)}>VIEW ALL</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>PUFFERS</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>LEATHER EFFECT</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>LEATHER</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>GILETS</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>WATER REPELLENT</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>WINDBREAKERS</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>BOMBER</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>DENIM</Link></li>
+            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>DUBAI ABAYA</Link></li>
+            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>KIMONO</Link></li>
+            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>FARASHA</Link></li>
+            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>THAI GOWN</Link></li>
+            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>THAI CO-ORDS</Link></li>
+            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>HIJAB</Link></li>
+            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>ACCESSORIES</Link></li>
           </ul>
         </nav>
 
