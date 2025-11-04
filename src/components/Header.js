@@ -16,14 +16,14 @@ const Header = () => {
         
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-links">
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>VIEW ALL</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>DUBAI ABAYA</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>KIMONO</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>FARASHA</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>THAI GOWN</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>THAI CO-ORDS</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>HIJAB</Link></li>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>ACCESSORIES</Link></li>
+            <li><Link to="/?category=all" onClick={() => setIsMenuOpen(false)}>VIEW ALL</Link></li>
+            <li><Link to="/?category=dubai-abaya" onClick={() => setIsMenuOpen(false)}>DUBAI ABAYA</Link></li>
+            <li><Link to="/?category=kimono" onClick={() => setIsMenuOpen(false)}>KIMONO</Link></li>
+            <li><Link to="/?category=farasha" onClick={() => setIsMenuOpen(false)}>FARASHA</Link></li>
+            <li><Link to="/?category=thai-gown" onClick={() => setIsMenuOpen(false)}>THAI GOWN</Link></li>
+            <li><Link to="/?category=thai-co-ords" onClick={() => setIsMenuOpen(false)}>THAI CO-ORDS</Link></li>
+            <li><Link to="/?category=hijab" onClick={() => setIsMenuOpen(false)}>HIJAB</Link></li>
+            <li><Link to="/?category=accessories" onClick={() => setIsMenuOpen(false)}>ACCESSORIES</Link></li>
           </ul>
         </nav>
 

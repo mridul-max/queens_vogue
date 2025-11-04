@@ -1,12 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import './Home.css';
 
 const Home = () => {
+  const [searchParams] = useSearchParams();
+  const categoryParam = searchParams.get('category');
+  
   // State to track current view mode
   const [currentView, setCurrentView] = useState(1);
   // State to track how many products to display
   const [visibleProducts, setVisibleProducts] = useState(8);
+  // State to track selected category
+  const [selectedCategory, setSelectedCategory] = useState('ALL');
+
+  // Update category when URL parameter changes
+  useEffect(() => {
+    if (categoryParam) {
+      // Convert URL param to category format
+      const categoryMap = {
+        'all': 'ALL',
+        'dubai-abaya': 'DUBAI ABAYA',
+        'kimono': 'KIMONO',
+        'farasha': 'FARASHA',
+        'thai-gown': 'THAI GOWN',
+        'thai-co-ords': 'THAI CO-ORDS',
+        'hijab': 'HIJAB',
+        'accessories': 'ACCESSORIES'
+      };
+      setSelectedCategory(categoryMap[categoryParam] || 'ALL');
+      setVisibleProducts(8); // Reset visible products when category changes
+    } else {
+      setSelectedCategory('ALL');
+    }
+  }, [categoryParam]);
 
   // Handle view change
   const handleViewChange = (viewNumber) => {
@@ -26,170 +53,175 @@ const Home = () => {
       price: "৳4,400",
       image: `${process.env.PUBLIC_URL}/assets/Burka1.jpg`,
       video: `${process.env.PUBLIC_URL}/assets/BurkaVideo1.mp4`,
-      category: "BURKA"
+      category: "DUBAI ABAYA"
     },
     {
       id: 2,
       name: "Premium Black Pattern Burka",
       price: "৳4,400",
       image: `${process.env.PUBLIC_URL}/assets/Burka2.jpg`,
-      category: "BURKA"
+      category: "DUBAI ABAYA"
     },
     {
       id: 3,
       name: "Traditional Floral Design Burka",
       price: "৳5,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka3.jpg`,
-      category: "BURKA"
+      category: "FARASHA"
     },
     {
       id: 4,
       name: "Sophisticated Black Burka",
       price: "৳4,400",
       image: `${process.env.PUBLIC_URL}/assets/Burka4.jpg`,
-      category: "BURKA"
+      category: "FARASHA"
     },
     {
       id: 5,
       name: "Classic Modest Burka",
       price: "৳4,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka5.jpg`,
-      category: "BURKA"
+      category: "DUBAI ABAYA"
     },
     {
       id: 6,
       name: "Luxurious Black Embellished Burka",
       price: "৳5,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka6.jpg`,
-      category: "BURKA"
+      category: "DUBAI ABAYA"
     },
     {
       id: 7,
       name: "Contemporary Designed Burka",
       price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka7.jpg`,
-      category: "BURKA"
+      category: "THAI GOWN"
     },
     {
       id: 8,
       name: "Modern Style Burka",
       price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka8.jpg`,
-      category: "BURKA"
+      category: "THAI GOWN"
     },
     {
       id: 9,
       name: "Graceful Black Burka",
       price: "৳2,600",
       image: `${process.env.PUBLIC_URL}/assets/Burka9.jpg`,
-      category: "BURKA"
+      category: "THAI GOWN"
     },
     {
       id: 10,
       name: "Designer Pattern Burka",
       price: "৳2,600",
       image: `${process.env.PUBLIC_URL}/assets/Burka10.jpg`,
-      category: "BURKA"
+      category: "THAI GOWN"
     },
     {
       id: 11,
       name: "Premium Collection Burka",
       price: "৳2,700",
       image: `${process.env.PUBLIC_URL}/assets/Burka11.jpg`,
-      category: "BURKA"
+      category: "THAI GOWN"
     },
     {
       id: 12,
       name: "Burgundy Floral Pattern Dress",
       price: "৳2,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka12.jpg`,
-      category: "FLORAL"
+      category: "THAI GOWN"
     },
     {
       id: 13,
       name: "Geometric Black & White Dress",
       price: "৳2,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka13.jpg`,
-      category: "GEOMETRIC"
+      category: "THAI GOWN"
     },
     {
       id: 14,
       name: "Modern Geometric Pattern Dress",
       price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka14.jpg`,
-      category: "GEOMETRIC"
+      category: "THAI GOWN"
     },
     {
       id: 15,
       name: "Gradient Ombre Dress - Green",
       price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka15.jpg`,
-      category: "OMBRE"
+      category: "THAI GOWN"
     },
     {
       id: 16,
       name: "Chevron Stripe Set - Multi Color",
       price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka16.jpg`,
-      category: "SETS"
+      category: "THAI GOWN"
     },
     {
       id: 17,
       name: "Gradient Ombre Dress - Pink",
       price: "৳2,700",
       image: `${process.env.PUBLIC_URL}/assets/Burka17.jpg`,
-      category: "OMBRE"
+      category: "THAI GOWN"
     },
     {
       id: 18,
       name: "Pleated Style Dress Collection",
       price: "৳2,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka18.jpg`,
-      category: "PLEATED"
+      category: "THAI GOWN"
     },
     {
       id: 19,
       name: "Pink Embroidered Traditional Dress",
       price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka19.jpg`,
-      category: "EMBROIDERED"
+      category: "THAI GOWN"
     },
     {
       id: 20,
       name: "Zebra Leaf Pattern Dress",
       price: "৳2,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka20.jpg`,
-      category: "PATTERN"
+      category: "THAI GOWN"
     },
     {
       id: 21,
       name: "Black & White Stripe Dress",
       price: "৳3,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka21.jpg`,
-      category: "STRIPES"
+      category: "THAI GOWN"
     },
     {
       id: 22,
       name: "Burgundy Embroidered Dress",
       price: "৳2,500",
       image: `${process.env.PUBLIC_URL}/assets/Burka22.jpg`,
-      category: "EMBROIDERED"
+      category: "THAI GOWN"
     },
     {
       id: 23,
       name: "Black Embroidered Traditional Dress",
       price: "৳3,800",
       image: `${process.env.PUBLIC_URL}/assets/Burka23.jpg`,
-      category: "EMBROIDERED"
+      category: "THAI GOWN"
     }
   ];
+
+  // Filter products based on selected category
+  const filteredItems = selectedCategory === 'ALL' 
+    ? clothingItems 
+    : clothingItems.filter(item => item.category === selectedCategory);
 
   return (
     <div className="home">
       <div className="container">
         <div className="page-header">
           <div className="breadcrumb">
-            <span>VIEW ALL</span>
+            <span>{selectedCategory === 'ALL' ? 'VIEW ALL' : selectedCategory}</span>
           </div>
           <div className="view-options">
             <span>VIEW</span>
@@ -218,12 +250,12 @@ const Home = () => {
         </div>
 
         <div className={`products-grid view-${currentView}`}>
-          {clothingItems.slice(0, visibleProducts).map(item => (
+          {filteredItems.slice(0, visibleProducts).map(item => (
             <ProductCard key={item.id} product={item} />
           ))}
         </div>
 
-        {visibleProducts < clothingItems.length && (
+        {visibleProducts < filteredItems.length && (
           <div className="load-more">
             <button className="load-more-btn" onClick={handleLoadMore}>
               LOAD MORE ITEMS
